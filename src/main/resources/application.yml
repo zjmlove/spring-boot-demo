@@ -77,24 +77,27 @@ server:
 ##  thymeleaf:
 ##    cache: false
 ##    mode: LEGACYHTML5
-#
-###自定义参数
-#customing:
-#  params: 
-#    userName: Alex
-#    bookTitle: Spring Boot入门
-#    mapProps: 
-#      key1: value1 
-#      key2: value2
-#    listProp2:  
-#    - config2Value1  
-#    - config2Vavlue2  
-#    listProp1:  
-#    - name: abc  
-#      value: abcValue  
-#    - name: efg  
-#      value: efgValue  
-#      
+
+## 自定义 properties 
+## 两种写法：
+## 1.SystemParams类的@Component@ConfigurationProperties(prefix="customing.params")
+## 2.AppConfigure类
+customing:
+  params: 
+    userName: Alex
+    bookTitle: Spring Boot入门
+    mapProps: 
+      key1: value1 
+      key2: value2
+    listProp2:  
+    - config2Value1  
+    - config2Vavlue2  
+    listProp1:  
+    - name: abc  
+      value: abcValue  
+    - name: efg  
+      value: efgValue  
+      
 
 
   

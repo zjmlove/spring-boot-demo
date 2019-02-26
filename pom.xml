@@ -5,7 +5,7 @@
 	<artifactId>spring_boot_demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring_boot_demo</name>
-	<description>spirngboot demo ，contains：redis、mysql 多数据源、mybatis、junit、 </description>
+	<description>spirngboot demo ，contains：redis、mysql 多数据源、mybatis、junit4 + mokito 、热部署、</description>
 
 	<!--Inherit defaults from Spring Boot -->
 	<parent>
@@ -33,24 +33,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- 
-			报错： Compilation failure: Compilation failure: 程序包org.junit不存在
-			因为spring boot 2.x 之后，junit 使用的是 junit5 的版本，
-			这么写已经不行了：<dependency><groupId>junit</groupId><artifactId>junit</artifactId><version>4.12</version><scope>test</scope> </dependency>
-			需要定制junit。
-		 -->
+		<!-- SpringBoot2.X Junit被使用Junit5.X , 会导致单元测试报错。需要指定 spring-test 包的引入和junit4的引入。 -->
 		<dependency>
 	        <groupId>org.springframework</groupId>
 	        <artifactId>spring-test</artifactId>
 	        <version>4.3.18.RELEASE</version>
 	        <scope>test</scope>
 	    </dependency>
+	    <dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		</dependency>
 		<!-- 热部署插件 -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
-		</dependency> -->
+		</dependency>
 	</dependencies>
 
 	<!-- maven build 配置 -->
@@ -63,9 +63,9 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<!-- 热部署 devtools 启动 -->
-				<!-- <configuration>
+				<configuration>
 					<fork>true</fork>
-				</configuration> -->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
