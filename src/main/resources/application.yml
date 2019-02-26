@@ -1,0 +1,100 @@
+########################################################
+##tomcat server配置
+########################################################
+server:
+  port: 8080
+  tomcat: 
+    uri-encoding: UTF-8
+  
+########################################################
+##datasource 默认数据源配置
+########################################################
+#spring:
+#  application: 
+#    name: demo-boot
+#  # 数据库 and dbcp 连接池
+#  datasource:
+#    url: jdbc:mysql://182.254.131.140:3306/shares_manager?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true
+#    username: wangmeng
+#    password: Ywc201405
+#    driver-class-name: com.mysql.jdbc.Driver
+#    type: org.apache.commons.dbcp.BasicDataSource
+#    dbcp:
+#      username: wangmeng
+#      password: Ywc201405
+#      driver-class-name: com.mysql.jdbc.Driver
+#      initial-size: 1
+#      max-active: 20
+#      min-idle: 1
+#      max-idle: 20
+#      max-wait: 6000
+#  rabbitmq:
+#    host: 10.211.55.15
+#    port: 5672
+#    username: admin
+#    password: admin
+#  redis:
+#    database: 0
+#    host: 10.211.55.15
+#    password: 123456
+#    port: 6379
+#    timeout: 3000
+#    pool:
+#      max-active: 8
+#      min-idle: 1
+#      max-idle: 8
+#      max-wait: -1
+#
+#      
+#########################################################
+###mybatis 配置
+#########################################################
+#mybatis:
+#  type-aliases-package: com.example.model
+#  mapper-locations: classpath:com/example/mapper/*.xml
+#
+#########################################################
+####REDIS (RedisProperties) redis基本配置；
+#########################################################
+#  
+#
+###freemarker 配置
+##  freemarker:
+##    allow-request-override: false
+##    cache: true
+##    check-template-location: false
+##    charset: UTF-8
+##    content-type: text/html; charset=utf-8
+##    expose-request-attributes: false
+##    expose-session-attributes: false
+##    expose-spring-macro-helpers: false
+###    prefix: /fm
+##    suffix: .ftl
+##    template-loader-path:
+##    - classpath:/template
+#
+### thymeleaf 配置
+##  thymeleaf:
+##    cache: false
+##    mode: LEGACYHTML5
+#
+###自定义参数
+#customing:
+#  params: 
+#    userName: Alex
+#    bookTitle: Spring Boot入门
+#    mapProps: 
+#      key1: value1 
+#      key2: value2
+#    listProp2:  
+#    - config2Value1  
+#    - config2Vavlue2  
+#    listProp1:  
+#    - name: abc  
+#      value: abcValue  
+#    - name: efg  
+#      value: efgValue  
+#      
+
+
+  
