@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.demo.springboot</groupId>
 	<artifactId>spring_boot_demo</artifactId>
@@ -57,16 +57,30 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
-		<!-- 数据库驱动引入，暂时不用 -->
-		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-data-jpa</artifactId> 
-			</dependency> <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
-			</dependency> -->
+		<!--jpa 引入，使用其注解标准 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- MySQL 数据库驱动引入 -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 		<!-- mybatis 引入（orm框架） -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.3.0</version>
+			<version>1.3.2</version>
 		</dependency>
+		<!-- spring jpa
+	       spring jpa中带有自带的tomcat数据连接池;
+	       在代码中我们也需要用到.
+	     -->
+	    <dependency>
+	       <groupId>org.springframework.boot</groupId>
+	       <artifactId>spring-boot-starter-data-jpa</artifactId>
+	    </dependency>
 		<!-- redis 引入 -->
 		<!-- springboot 1.5的版本默认采用的连接池技术是jedis。 springboot 2.0以上版本默认连接池是lettuce（莱锤死，高级redis客户端），由于以前多使用jedis的连接池技术，所以这里工程中使用lettuce。 -->
 		<dependency>

@@ -13,11 +13,11 @@ spring:
   application: 
     name: demo-boot
   # 数据库 and dbcp 连接池
-#  datasource:
-#    url: jdbc:mysql://182.254.131.140:3306/test?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true
-#    username: wangmeng
-#    password: Ywc201405
-#    driver-class-name: com.mysql.jdbc.Driver
+  datasource:
+    url: jdbc:mysql://182.254.131.140:3306/test?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true
+    username: wangmeng
+    password: Ywc201405
+    driver-class-name: com.mysql.jdbc.Driver
 #    type: org.apache.commons.dbcp2.BasicDataSource
 #    dbcp2:
 #      username: wangmeng
@@ -48,12 +48,12 @@ spring:
         max-wait: -1
 
 #########################################################
-###mybatis 配置
+###mybatis  不需要配置项、不需要mapper.xml文件，本工程将使用纯注解的形式完成sql的操作。
 #########################################################
-#mybatis:
-#  type-aliases-package: com.example.model
-#  mapper-locations: classpath:com/example/mapper/*.xml
-#
+mybatis:
+#  type-aliases-package: com.demo.springboot.domain
+  mapper-locations: classpath:mappers/*.xml
+
 #########################################################
 ####REDIS (RedisProperties) redis基本配置；
 #########################################################
