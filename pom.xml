@@ -7,7 +7,7 @@
 	<name>spring_boot_demo</name>
 	<description>
 		spirngboot demo contains：mysql、mysql 多数据源、dbcp2 数据库连接池、mybatis、junit4 + mokito 、
-		redis、redis lettuce 连接池、基于redis 的 session 共享方案、基于redis 的cache管理，提升性能（）、
+		redis、redis lettuce nosql数据库连接池技术、基于redis 的 session 共享方案、基于redis 的cache管理，提升性能（）、
 		thymeleaf 前端模板引擎、WebJars jar形式的js引入依赖、热部署、定时任务 job、
 	</description>
 
