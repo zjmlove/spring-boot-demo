@@ -22,12 +22,12 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class HelloWorldControllerTest {
+public class DemoControllerTest {
 
     private MockMvc mvc;
     @Before
     public void setUp() throws Exception {
-        mvc = MockMvcBuilders.standaloneSetup(new HelloWorldController()).build();
+        mvc = MockMvcBuilders.standaloneSetup(new DemoController()).build();
     }
 	
 	@Test

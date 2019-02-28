@@ -2,6 +2,7 @@ package com.demo.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -13,7 +14,8 @@ import org.springframework.context.annotation.ComponentScan;
  * @author zhangjiamei
  *
  */
-@SpringBootApplication
+//@SpringBootApplication
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @ComponentScan(basePackages={"com.demo"}) //扫描包下的所有组件，包括启动类、servlet等
 public class Application {
 	public static void main(String[] args) {
@@ -22,5 +24,6 @@ public class Application {
 		 * 则默认 web 访问端口为：8080。
 		 */
 		SpringApplication.run(Application.class, args);
+		
 	}
 }

@@ -9,43 +9,44 @@ server:
 ########################################################
 ##datasource 默认数据源配置
 ########################################################
-#spring:
-#  application: 
-#    name: demo-boot
-#  # 数据库 and dbcp 连接池
+spring:
+  application: 
+    name: demo-boot
+  # 数据库 and dbcp 连接池
 #  datasource:
-#    url: jdbc:mysql://182.254.131.140:3306/shares_manager?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true
+#    url: jdbc:mysql://182.254.131.140:3306/test?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true
 #    username: wangmeng
 #    password: Ywc201405
 #    driver-class-name: com.mysql.jdbc.Driver
-#    type: org.apache.commons.dbcp.BasicDataSource
-#    dbcp:
+#    type: org.apache.commons.dbcp2.BasicDataSource
+#    dbcp2:
 #      username: wangmeng
 #      password: Ywc201405
 #      driver-class-name: com.mysql.jdbc.Driver
-#      initial-size: 1
-#      max-active: 20
-#      min-idle: 1
+#      initial-size: 4
+#      min-idle: 4
+#      max-total: 20
 #      max-idle: 20
-#      max-wait: 6000
+#      max-wait-millis: 10000
+#      validation-query: SELECT x
 #  rabbitmq:
 #    host: 10.211.55.15
 #    port: 5672
 #    username: admin
 #    password: admin
-#  redis:
-#    database: 0
-#    host: 10.211.55.15
-#    password: 123456
-#    port: 6379
-#    timeout: 3000
-#    pool:
-#      max-active: 8
-#      min-idle: 1
-#      max-idle: 8
-#      max-wait: -1
-#
-#      
+  redis:
+    database: 0
+    host: 112.124.110.193
+    password: wm_dev
+    port: 6377
+    timeout: 3000
+    lettuce:
+      pool:
+        max-active: 10
+        min-idle: 1
+        max-idle: 1000
+        max-wait: -1
+
 #########################################################
 ###mybatis 配置
 #########################################################
@@ -79,9 +80,10 @@ server:
 ##    mode: LEGACYHTML5
 
 ## 自定义 properties 
-## 两种写法：
+## 三种写法：
 ## 1.SystemParams类的@Component@ConfigurationProperties(prefix="customing.params")
 ## 2.AppConfigure类
+## 3.在类的属性上使用  @Value("${customing.params.userName}")
 customing:
   params: 
     userName: Alex
@@ -98,6 +100,3 @@ customing:
     - name: efg  
       value: efgValue  
       
-
-
-  
