@@ -14,7 +14,7 @@ spring:
     name: demo-boot
   # 数据库 and dbcp 连接池
   datasource:
-    url: jdbc:mysql://182.254.131.140:3306/test?useUnicode=true&amp;amp;characterEncoding=utf-8&amp;amp;autoReconnect=true
+    url: jdbc:mysql://182.254.131.140:3306/test?useUnicode=true&characterEncoding=utf-8
     username: wangmeng
     password: Ywc201405
     driver-class-name: com.mysql.jdbc.Driver
