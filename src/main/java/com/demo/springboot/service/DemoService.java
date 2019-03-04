@@ -6,13 +6,13 @@ import com.demo.springboot.domain.repository.DemoRepository;
 
 public interface DemoService {
 	
-//	Demo getDemoById(Long id);
-//
-//	void updateDemo(Demo demo);
-//
-//	void removeDemo(Demo demo);
-//	
-//	void insertDemo(Demo demo);
+	Demo getDemoById(Long id);
+
+	void updateDemo(Demo demo);
+
+	void removeDemo(Demo demo);
+	
+	void insertDemo(Demo demo);
 	
 	DemoRepository selectDemoRepositoryByPrimaryKey(Long id);
 }

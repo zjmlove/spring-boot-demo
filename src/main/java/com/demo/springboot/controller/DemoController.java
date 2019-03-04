@@ -129,26 +129,26 @@ public class DemoController {
 		return demoService.selectDemoRepositoryByPrimaryKey(id);
 	}
 	
-//	@RequestMapping("/getDemo")
-//	public Demo getDemo(Long id) {
-//		return demoService.getDemoById(id);
-//	}
-//	
-//	@RequestMapping("/updateDemo")
-//	public void update(String info) {
-//		Demo demo = demoService.getDemoById(1L);
-//		demo.setInfo(info);
-//		demoService.updateDemo(demo);
-//	}
-//
-//	@RequestMapping("/insertDemo")
-//	public void insertDemo(String name, String info) {
-//		demoService.insertDemo(new Demo(null, name, info));
-//	}
-//
-//	@RequestMapping("/deleteDemo")
-//	public void deleteDemo(Long id) {
-//		Demo demo = new Demo(id);
-//		demoService.removeDemo(demo);
-//	}
+	@RequestMapping("/getDemo")
+	public Demo getDemo(Long id) {
+		return demoService.getDemoById(id);
+	}
+	
+	@RequestMapping("/updateDemo")
+	public void update(String info) {
+		Demo demo = demoService.getDemoById(1L);
+		demo.setInfo(info);
+		demoService.updateDemo(demo);
+	}
+
+	@RequestMapping("/insertDemo")
+	public void insertDemo(String name, String info) {
+		demoService.insertDemo(new Demo(null, name, info));
+	}
+
+	@RequestMapping("/deleteDemo")
+	public void deleteDemo(Long id) {
+		Demo demo = new Demo(id);
+		demoService.removeDemo(demo);
+	}
 }

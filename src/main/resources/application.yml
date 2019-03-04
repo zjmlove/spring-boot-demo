@@ -14,10 +14,10 @@ spring:
     name: demo-boot
   # 数据库 and dbcp 连接池
   datasource:
-    url: jdbc:mysql://182.254.131.140:3306/test?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://182.254.131.140:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: wangmeng
     password: Ywc201405
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver #mysql官方驱动修改 驱动包类、rul用法修改、注意url中时区的问题
 #    type: org.apache.commons.dbcp2.BasicDataSource
 #    dbcp2:
 #      username: wangmeng

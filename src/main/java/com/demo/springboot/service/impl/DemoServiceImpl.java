@@ -16,28 +16,28 @@ public class DemoServiceImpl implements DemoService {
 	@Autowired
 	private DemoMapper demoMapper;
 
-//	@Override
-//	public Demo getDemoById(Long id) {
-//		return demoMapper.selectByPrimaryKey(id);
-//	}
-//
-//	@Override
-//	public void updateDemo(Demo demo) {
-//		demoMapper.updateByPrimaryKeySelective(demo);
-//	}
-//
-//	@Override
-//	public void removeDemo(Demo demo) {
-//		demoMapper.deleteByPrimaryKey(demo.getId());
-//	}
-//
-//	@Override
-//	public void insertDemo(Demo demo) {
-//		demoMapper.insertSelective(demo);
-//	}
+	@Override
+	public Demo getDemoById(Long id) {
+		return demoMapper.getOne(id);
+	}
 
 	@Override
 	public DemoRepository selectDemoRepositoryByPrimaryKey(Long id) {
 		return demoMapper.selectDemoRepositoryByPrimaryKey(id);
+	}
+	
+	@Override
+	public void updateDemo(Demo demo) {
+		demoMapper.updateByPrimaryKeySelective(demo);
+	}
+
+	@Override
+	public void removeDemo(Demo demo) {
+		demoMapper.deleteByPrimaryKey(demo.getId());
+	}
+
+	@Override
+	public void insertDemo(Demo demo) {
+		demoMapper.insertSelective(demo);
 	}
 }

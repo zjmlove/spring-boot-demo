@@ -19,9 +19,9 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableAutoConfiguration //启用自动配置
 //@EnableAutoConfiguration(exclude = DataSourceAutoConfiguration.class) //启用自动配置，排除数据库自动配置，适用于数据库配置自己写的方式。
-@ComponentScan(basePackages={"com.demo.springboot.config.*",
-							"com.demo.springboot.controller.*",
-							"com.demo.springboot.service.*"}) //扫描包下的所有组件，包括启动类、servlet等
+@ComponentScan(basePackages={"com.demo.springboot.config",
+							"com.demo.springboot.controller",
+							"com.demo.springboot.service"}) //扫描包下的所有组件，包括启动类、servlet等
 @MapperScan("com.demo.springboot.mapper") //或者直接在Mapper类上面添加注解@Mapper,建议使用上面前者，不然每个mapper加个注解也挺麻烦的
 public class Application {
 	public static void main(String[] args) {

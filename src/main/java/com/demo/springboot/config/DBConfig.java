@@ -1,7 +1,6 @@
 package com.demo.springboot.config;
 
 import javax.sql.DataSource;
-
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -16,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 //@Configuration
-//@MapperScan("com.demo.springboot.mapper") //或者直接在Mapper类上面添加注解@Mapper,建议使用上面前者，不然每个mapper加个注解也挺麻烦的
+//@MapperScan("com.demo.springboot.mapper") //或者直接在Mapper类上面添加注解@Mapper,建议使用前者，不然每个mapper加个注解也挺麻烦的
 public class DBConfig {
 //	@Autowired
 //	ApplicationContext applicationContext;//引入上下文
